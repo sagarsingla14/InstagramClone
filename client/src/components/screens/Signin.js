@@ -51,14 +51,12 @@ const Signin = () => {
                     <input type = "text"
 						placeholder = "Email"
 						value = {email}
-						onChange = {
-                        (e) => setEmail(e.target.value) }
+						onChange = {(e) => setEmail(e.target.value)}
                     />
-                    <input type = "text"
+                    <input type = "password"
 						placeholder = "Password"
-						value = { password }
-						onChange = {
-                        (e) => setPassword(e.target.value) }
+						value = {password}
+						onChange = {(e) => setPassword(e.target.value)}
                     />
 					<button className = "btn button"
 						onClick = {

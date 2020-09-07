@@ -12,16 +12,17 @@ mongoose.connect(MONGOURI , {
 mongoose.connection.on('connected' , () => {
     console.log("connected Successfully")
 })
+
 mongoose.connection.on('error' , (e) => {
     console.log("error in mongoose connection" , e)
 })
 
 app.use(express.json())
+
 require('./models/user')
 require('./models/post')
 app.use(require('./routes/auth'))
 app.use(require('./routes/post'))
-
 
 const middleWare = (req , res , next) => {
     console.log("middleWare Exexuted !!");
